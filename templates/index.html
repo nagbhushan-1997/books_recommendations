@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: black;">
+    <nav class="navbar" style="background-color: #00a65a">
+        <a class="navbar-brand">My Book Recommender</a>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="">Contact</a></li>
+        
+        </ul>   
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 style="color: white; text-align: center;">Welcome to My Book Recommender</h1>
+                <h2 style="color: white; text-align: center;">Get book recommendations based on your preferences</h2>
+                <h3 style="color: white; text-align: center;">Top 50 Books are</h3>
+
+            </div>
+
+            {% for i in range(book_name|length) %}
+
+                <div class="col-md-3" style="margin-top: 80px">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{ image_url[i] }}" alt="">
+                            <p style="color: aliceblue;">{{book_name[i]}}</p>
+                            <p style="color: aliceblue;">{{author_name[i]}}</p>
+                            <p style="color: antiquewhite;">{{votes[i]}}</p>
+                            <p style="color: antiquewhite;">{{ratings[i]|round(2)}}</p>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor%}
+
+
+            
+
+
+            
+        </div>
+    </div>
+
+</body>
+</html>
