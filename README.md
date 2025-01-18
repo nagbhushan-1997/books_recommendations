@@ -9,7 +9,10 @@ This repository contains the implementation of a Book Recommendation System usin
 - **Scikit-learn**: For machine learning algorithms.
 - **Surprise**: For building and analyzing recommender systems.
 - **Matplotlib**: For data visualization.
-- **Seaborn**: For statistical data visualization.
+## Dataset
+
+The dataset used for this project was downloaded from [Kaggle](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset). It contains book ratings and other relevant information necessary for building the recommendation system.
+
 
 ## Installation
 
